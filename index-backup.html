@@ -1,0 +1,47 @@
+---
+layout: default
+title: Channel Search
+type: channel
+---
+<div class="container mb-15">
+    <div class="progress" style="margin-bottom:5px">
+        <div id="progressBar" class="progress-bar" role="progressbar" style="" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+            <div class="label"></div>
+        </div>
+    </div>
+    <div id="progressText" style="width: 100%;text-align: center;">Idle</div>
+</div>
+<div class="container mb-15">
+    <h2>Channel Search</h2>
+    <p>
+        Check the uploads of channel(s) for geotagged videos.
+        This page is essentially <a target="_blank" href="">YouTube Metadata Bulk</a>
+        but with a map and all data filtered to only the geotagged ones.
+        Recommended to instead export data from YMB and import here if you want the data for everything not geotagged too.
+    </p>
+    <p>
+        Submit a comma separated list of multiple videos, playlists, or channels
+    </p>
+    <div class="input-group mb-3">
+        <input id="channels" type="text" class="form-control" placeholder="https://www.youtube.com/channel/UCuAXFkgsw1L7xaCfnd5JJOw"
+               aria-label="https://www.youtube.com/channel/UCuAXFkgsw1L7xaCfnd5JJOw" aria-describedby="btnSubmit" autocomplete="off">
+        <button class="btn btn-primary disabled" type="button" id="submit">
+            <span id="text">Submit</span>
+            <span class="countdown"></span>
+        </button>
+    </div>
+    <div>
+        <span>Accepted formats</span>
+        <ul id="formats" class="collapse show" style="padding-top:7px">
+            <li><span class="optional">https://www.</span>youtube.com/channel/<span class="orange">channel_id</span></li>
+            <li><span class="optional">https://www.</span>youtube.com/user/<span class="orange">username</span></li>
+            <li><span class="optional">https://www.</span>youtube.com/@<span class="orange">channel_handle</span>
+            <li><span class="optional">https://www.</span>youtube.com/c/<span class="orange">custom_url</span></li>
+            <li><span class="optional">https://www.</span>youtube.com/<span class="orange">custom_url</span></li>
+            <li>
+                Also accepts direct ids:
+                <span class="orange">channel_id</span>
+            </li>
+        </ul>
+    </div>
+</div>
